@@ -24,6 +24,27 @@ namespace CMP1903M_A01_2223
             Console.WriteLine("Pack made");
         }
 
+        public static bool ShuffleCardPack(int typeOfShuffle)
+        {
+            //Shuffles the pack based on the type of shuffle
+            if (typeOfShuffle == 1)
+            {
+                Console.WriteLine("Doing the Fisher-Yates Shuffle...");
+
+                return true;
+            }
+            else if (typeOfShuffle == 2)
+            {
+                Console.WriteLine("Doing the Riffle Shuffle...");
+                return true;
+            }
+            else if (typeOfShuffle == 3)
+            {
+                Console.WriteLine("No Shuffle...");
+                return true;
+            }
+        }
+
         public static Card dealCard()
         {
             //Deals one card
