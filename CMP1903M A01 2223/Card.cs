@@ -23,68 +23,68 @@ namespace CMP1903M_A01_2223
 
         public string GetCard()
         {
-            string valueStr;
+            string valueStri;
             switch (Value)
             {
                 case 1:
-                    valueStr = "Ace";
+                    valueStri = "Ace";
                     break;
                 case 2:
-                    valueStr = "2";
+                    valueStri = "2";
                     break;
                 case 3:
-                    valueStr = "3";
+                    valueStri = "3";
                     break;
                 case 4:
-                    valueStr = "4";
+                    valueStri = "4";
                     break;
                 case 5:
-                    valueStr = "5";
+                    valueStri = "5";
                     break;
                 case 6:
-                    valueStr = "6";
+                    valueStri = "6";
                     break;
                 case 7:
-                    valueStr = "7";
+                    valueStri = "7";
                     break;
                 case 8:
-                    valueStr = "8";
+                    valueStri = "8";
                     break;
                 case 9:
-                    valueStr = "9";
+                    valueStri = "9";
                     break;
                 case 10:
-                    valueStr = "10";
+                    valueStri = "10";
                     break;
                 case 11:
-                    valueStr = "Jack";
+                    valueStri = "Jack";
                     break;
                 case 12:
-                    valueStr = "Queen";
+                    valueStri = "Queen";
                     break;
                 case 13:
-                    valueStr = "King";
+                    valueStri = "King";
                     break;
             }
 
-            string suitStr;
+            string suitStri;
             switch (Suit)
             {
                 case 1:
-                    suitStr = "Spades";
+                    suitStri = "Spades";
                     break;
                 case 2:
-                    suitStr = "Clubs";
+                    suitStri = "Clubs";
                     break;
                 case 3:
-                    suitStr = "Diamonds";
+                    suitStri = "Diamonds";
                     break;
                 case 4:
-                    suitStr = "Hearts";
+                    suitStri = "Hearts";
                     break;
             }
 
-            return valueStr + " of " + suitStr;
+            return valueStri + " of " + suitStri;
 
         }
     }

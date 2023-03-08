@@ -8,7 +8,7 @@ namespace CMP1903M_A01_2223
 {
     class Pack
     {
-        private List<Card> pack;
+        public static List<Card> pack;
 
         public Pack()
         {
@@ -21,27 +21,9 @@ namespace CMP1903M_A01_2223
                     pack.Add(new Card(i, j));
                 }
             }
+            Console.WriteLine("Pack made");
         }
 
-        public static bool shuffleCardPack(int typeOfShuffle)
-        {
-            //Shuffles the pack based on the type of shuffle
-            switch (typeOfShuffle)
-            {
-                case 1:
-                    // Implement Fisher-Yates Shuffle
-                    return true;
-                case 2:
-                    // Riffle Shuffle
-                    return true;
-                case 3:
-                    // No shuffle
-                    return true;
-                default:
-                    return false;
-            }
-            
-        }
         public static Card dealCard()
         {
             //Deals one card

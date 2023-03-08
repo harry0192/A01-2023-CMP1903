@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,22 +28,35 @@ namespace CMP1903M_A01_2223
                     Console.Write("No Shuffle(3), ");
                     Console.Write("Quit(4)");
                     Console.Write('\n');
-
+                    
 
                 }
+                shuffleType = Console.Read();
 
+                if (shuffleType == 1)
+                {
+                    Console.WriteLine("Fisher-Yates Shuffle");
+                    run = true;
 
-                if (shuffleType == 4)
+                }
+                else if (shuffleType == 2)
+                {
+                    Console.WriteLine("Riffle Shuffle");
+                    run = true;
+
+                }
+                else if (shuffleType == 3)
+                {
+                    Console.WriteLine("No shuffle");
+                    run = true;
+                }
+                else if (shuffleType == 4)
                 {
                     Console.WriteLine("Quiting");
                     run = false;
                 }
 
-                else
-                {
-
-                }
-            }
+            } 
         }
     }
 }
