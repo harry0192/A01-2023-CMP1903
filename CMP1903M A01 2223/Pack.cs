@@ -8,15 +8,15 @@ namespace CMP1903M_A01_2223
 {
     class Pack
     {
-        public static List<Card> pack;
+        private List<Card> pack;
 
         public Pack()
         {
             //Initialise the card pack here
             pack = new List<Card>();
-            for ( int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 4; i++)
             {
-                for ( int j = 1; j <= 13; j++)
+                for (int j = 1; j <= 13; j++)
                 {
                     pack.Add(new Card(i, j));
                 }
@@ -43,9 +43,15 @@ namespace CMP1903M_A01_2223
                 Console.WriteLine("No Shuffle...");
                 return true;
             }
+            else
+            {
+                Console.WriteLine("Invalid input");
+                return false;
+            }
+
         }
 
-        public static Card dealCard()
+        public Card dealCard()
         {
             //Deals one card
             if (pack.Count > 0)
@@ -54,34 +60,35 @@ namespace CMP1903M_A01_2223
                 pack.RemoveAt(0);
                 return card;
             }
-            else 
+            else
             {
                 return null;
             }
 
         }
-        public static List<Card> dealCard(int amount)
+        public List<Card> dealCard(int amount)
         {
             //Deals the number of cards specified by 'amount'
-            List <Card> list = new List<Card>();
-            for ( int i = 0; i < amount; i++ )
+            List<Card> dealtcards = new List<Card>();
+            for (int i = 0; i < amount; i++)
             {
                 Card card = dealCard();
-                if (card != null )
+                if (card != null)
                 {
-                    cards.Add(card);
+                    dealtcards.Add(card);
                 }
                 else
                 {
                     break;
                 }
             }
-            return cards;
+            return dealtcards;
         }
-    }
 
-    public List<Card> GetPack()
-    {
-        return pack;
+
+        public List<Card> GetPack()
+        {
+            return pack;
+        }
     }
 }

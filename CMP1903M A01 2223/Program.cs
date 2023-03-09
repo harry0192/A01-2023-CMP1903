@@ -4,6 +4,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CMP1903M_A01_2223
 {
@@ -13,7 +14,8 @@ namespace CMP1903M_A01_2223
         {
             Pack pack = new Pack();
             Console.WriteLine("Welcome");
-            Console.WriteLine();
+            Console.WriteLine("The deck has ", pack.GetPack().Count, " cards \n");
+            
 
             bool run = true;
             while (run)
@@ -28,10 +30,18 @@ namespace CMP1903M_A01_2223
                     Console.Write("No Shuffle(3), ");
                     Console.Write("Quit(4)");
                     Console.Write('\n');
-                    
+                    shuffleType = int.Parse(Console.ReadLine());
+                    if (shuffleType >= 1 && shuffleType <= 4)
+                    {
+                        valid = true;
+                    } 
+                    else
+                    {
+                        Console.WriteLine("Invalid Input");
+                    }
 
                 }
-                shuffleType = Console.Read();
+                
 
                 if (shuffleType == 1)
                 {
@@ -55,6 +65,27 @@ namespace CMP1903M_A01_2223
                     Console.WriteLine("Quiting");
                     run = false;
                 }
+
+                if (shuffleType != 4)
+                {
+                    int choice;
+                    Console.WriteLine("Deal 1 or 5 cards?");
+                    choice = int.Parse(Console.ReadLine());
+                    if (choice == 1)
+                    {
+                        Card dealtCard = pack.dealCard();
+                        Console.WriteLine("Card dealt is: ", dealtCard.GetCard());
+                    }
+                    else if (choice == 5)
+                    {
+                        List<Card> dealtCards = pack.dealCard(5);
+                        
+                        
+                        
+                    }
+                    
+                }
+                
 
             } 
         }

@@ -65,6 +65,9 @@ namespace CMP1903M_A01_2223
                 case 13:
                     valueStri = "King";
                     break;
+                default:
+                    valueStri = " ";
+                    break;
             }
 
             string suitStri;
@@ -82,10 +85,14 @@ namespace CMP1903M_A01_2223
                 case 4:
                     suitStri = "Hearts";
                     break;
+                default:
+                    suitStri = " ";
+                    break;
             }
 
             return valueStri + " of " + suitStri;
-
         }
+
+        
     }
 }
